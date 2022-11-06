@@ -4,10 +4,12 @@ import java.util.*;
 
 public class LC284_BrickNWall {
     
+    static final int M = (int)(1e9+7);
+
     static public int buildWall(int height, int width, int[] bricks) {
-        
+
         int jointPoints = width - 1;
-        int M = (int)1e9+7;
+        
         List<Integer> states = new ArrayList<>();
 
         Set<Integer> brickSet = new HashSet<>();

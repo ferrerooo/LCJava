@@ -16,8 +16,8 @@ public class LC0795_OddEvenJump {
         
         for (int i = n-2; i>=0; i--) {
 
-            Map.Entry oddEntry = map.ceilingEntry(arr[i]);
-            Map.Entry evenEntry = map.floorEntry(arr[i]);
+            Map.Entry<Integer, Integer> oddEntry = map.ceilingEntry(arr[i]);
+            Map.Entry<Integer, Integer> evenEntry = map.floorEntry(arr[i]);
 
             if (oddEntry != null) {
                 odd[i] = even[(Integer)oddEntry.getValue()];

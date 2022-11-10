@@ -1,6 +1,6 @@
 import org.junit.Test;
 
-public class Util_String {
+public class Util_1_String {
 
     @Test
     public void test() {

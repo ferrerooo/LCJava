@@ -1,7 +1,9 @@
+package Google;
+
 import java.util.*;
 
 class SnapshotArray {
-
+    /* 
     private TreeMap<Integer, Integer>[] arr;
     private int curId;
     
@@ -30,7 +32,7 @@ class SnapshotArray {
         return entry.getValue();
         
     }
-    
+    */
     
 }
 

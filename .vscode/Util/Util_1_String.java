@@ -9,6 +9,7 @@ public class Util_1_String {
 
         String s = "GeeksforGeeks";
         s.length();
+        System.out.println(s);
         
         s.charAt(0);
 
@@ -19,6 +20,13 @@ public class Util_1_String {
 
         String str = "geekss@for@geekss";
         String[] arrOfStr = str.split("@", 2);
+
+        String data = "1(2 3(6 7(11(14 ) ) ) 4(8(12 ) ) 5(9(13 ) 10 ) )";
+        String data1 = "(";
+        String[] tempArr = data1.split("\\(");
+        System.out.println(tempArr.length);
+
+
         /*
          * Regex Limit Result
          * 

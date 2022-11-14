@@ -7,7 +7,7 @@ class LC_0362 {
     private LinkedList<Integer> q;
     
     public LC_0362() {
-        q = new LinkedList();   
+        q = new LinkedList<>();   
     }
     
     public void hit(int timestamp) {

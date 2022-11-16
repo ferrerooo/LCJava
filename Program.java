@@ -1,15 +1,15 @@
 import Google.*;
-import Apple.*;
-
 import java.util.*;
 
 public class Program {
     
     public static void main(String[] args) {
         
-        LC0224 lc = new LC0224();
+        LC_0443_StringCompression lc = new LC_0443_StringCompression();
 
-        lc.calculate("(1+(4111+5+2)-3)+(6+8)");
+        char[] arr = {'a','b','b','b','b','b','b','b','b','b','b','b','b','b','b','b','b'};
+
+        System.out.println(lc.compress(arr));
 
     }
 

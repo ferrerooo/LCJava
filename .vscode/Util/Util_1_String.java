@@ -26,6 +26,11 @@ public class Util_1_String {
         String[] tempArr = data1.split("\\(");
         System.out.println(tempArr.length);
 
+        // int to string
+        String.valueOf(123);
+        // string to int
+        Integer.parseInt("123");
+
 
         /*
          * Regex Limit Result

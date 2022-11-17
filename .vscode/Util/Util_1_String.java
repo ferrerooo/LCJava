@@ -13,8 +13,9 @@ public class Util_1_String {
         
         s.charAt(0);
 
+        // string to char array
         char[] gfg = s.toCharArray();
-        
+        // char array to string
         char a[] = { 'g', 'e', 'e', 'k', 's', 'f', 'o', 'r', 'g', 'e', 'e', 'k', 's' };
         String s2 = new String(a);
 
@@ -31,7 +32,6 @@ public class Util_1_String {
         // string to int
         Integer.parseInt("123");
 
-
         /*
          * Regex Limit Result
          * 
@@ -42,6 +42,7 @@ public class Util_1_String {
          * s -2 {“geek”, ” “, ” “, “@for@geek”, “”, “”}
          * s 0 {“geek”, ””, ”@for@geek”}
          */
+        
     }
 
 }

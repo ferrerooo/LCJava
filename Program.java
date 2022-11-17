@@ -11,6 +11,8 @@ public class Program {
 
         System.out.println(lc.compress(arr));
 
+        System.out.println(1<<3);
+
     }
 
 }

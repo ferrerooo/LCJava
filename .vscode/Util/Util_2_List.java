@@ -7,7 +7,7 @@ public class Util_2_List {
     public void test() {
 
         // ArrayList, LinkedList
-
+        
         // List is interface (C# List is a class, IList is interface)
         List<Integer> l1 = new ArrayList<Integer>();
         l1.add(0, 1);

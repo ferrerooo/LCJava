@@ -1,6 +1,8 @@
 import java.util.*;
 
 public class LC_0394_DecodeString {
+
+    /* 
     List<String> list = this.parseString(s);
         Stack<String> stack = new Stack<>();
         StringBuilder result = new StringBuilder();
@@ -64,4 +66,5 @@ public class LC_0394_DecodeString {
         
         return list;
     }
+    */
 }

@@ -5,13 +5,11 @@ public class Program {
     
     public static void main(String[] args) {
         
-        LC_0443_StringCompression lc = new LC_0443_StringCompression();
+        LC_0609_FindDuplicateFileinSystem lc = new LC_0609_FindDuplicateFileinSystem();
 
-        char[] arr = {'a','b','b','b','b','b','b','b','b','b','b','b','b','b','b','b','b'};
+        String[] arr = {"root/a 1.txt(abcd) 2.txt(efgh)","root/c 3.txt(abcd)","root/c/d 4.txt(efgh)","root 4.txt(efgh)"};
 
-        System.out.println(lc.compress(arr));
-
-        System.out.println(1<<3);
+        System.out.println(lc.findDuplicate(arr));
 
     }
 

@@ -2,16 +2,16 @@
 
 import java.util.*;
 
-class LC_0146 {
+class LC_0146_LRUCache {
     
     private Map<Integer, Node> map;
     private Node head;
     private Node tail;
     private int capacity;
     
-    public LC_0146(int capacity) {
+    public LC_0146_LRUCache(int capacity) {
         
-        this.map = new HashMap();
+        this.map = new HashMap<>();
         this.head = new Node();
         this.tail = new Node();
         this.head.pre = null;

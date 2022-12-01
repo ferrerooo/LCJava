@@ -7,10 +7,14 @@ public class Program {
         
         LC_0609_FindDuplicateFileinSystem lc = new LC_0609_FindDuplicateFileinSystem();
 
-        String[] arr = {"root/a 1.txt(abcd) 2.txt(efgh)","root/c 3.txt(abcd)","root/c/d 4.txt(efgh)","root 4.txt(efgh)"};
+       //String[] arr = {"root/a 1.txt(abcd) 2.txt(efgh)","root/c 3.txt(abcd)","root/c/d 4.txt(efgh)","root 4.txt(efgh)"};
 
-        System.out.println(lc.findDuplicate(arr));
+        //System.out.println(lc.findDuplicate(arr));
+        
+        String a = "a1";
+        String b = "b1";
 
+        System.out.println(a.compareTo(b));
     }
 
 }

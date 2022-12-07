@@ -3,7 +3,7 @@ import java.util.*;
 
 public class Program {
     
-    public static void main(String[] args) {
+    public static void main(String[] args){
         
         LC_0609_FindDuplicateFileinSystem lc = new LC_0609_FindDuplicateFileinSystem();
 
@@ -15,6 +15,9 @@ public class Program {
         String b = "b1";
 
         System.out.println(a.compareTo(b));
+
+        throw new RuntimeException();
+
     }
 
 }

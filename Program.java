@@ -11,12 +11,12 @@ public class Program {
 
         //System.out.println(lc.findDuplicate(arr));
         
-        String a = "a1";
-        String b = "b1";
+        String s = "1,2,3,4,";
 
-        System.out.println(a.compareTo(b));
+        String[] arr = s.split(",");
 
-        throw new RuntimeException();
+        System.out.println(arr.length);
+
 
     }
 

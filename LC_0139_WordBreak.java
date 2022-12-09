@@ -1,3 +1,5 @@
+import java.util.*;;
+
 public class LC_0139_WordBreak {
     
     public boolean wordBreak(String s, List<String> wordDict) {

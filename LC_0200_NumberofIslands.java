@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class LC_0200_NumberofIslands {
 
     public int numIslands(char[][] grid) {

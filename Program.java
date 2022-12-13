@@ -11,11 +11,11 @@ public class Program {
 
         //System.out.println(lc.findDuplicate(arr));
         
-        String s = "1,2,3,4,";
+        char c  = 'a';
+        char c2 = 'a' + 'A'-'A';
 
-        String[] arr = s.split(",");
-
-        System.out.println(arr.length);
+        System.out.println(c);
+        System.out.println(c2);
 
 
     }

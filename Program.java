@@ -17,7 +17,12 @@ public class Program {
         System.out.println(c);
         System.out.println(c2);
 
-
+        int a = 999999991;
+        int b = Integer.MAX_VALUE;
+        if (a > b)
+            System.out.println("a win");
+        else   
+            System.out.println("b win");
     }
 
 }

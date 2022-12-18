@@ -11,18 +11,8 @@ public class Program {
 
         //System.out.println(lc.findDuplicate(arr));
         
-        char c  = 'a';
-        char c2 = 'a' + 'A'-'A';
-
-        System.out.println(c);
-        System.out.println(c2);
-
-        int a = 999999991;
-        int b = Integer.MAX_VALUE;
-        if (a > b)
-            System.out.println("a win");
-        else   
-            System.out.println("b win");
+        System.out.println(Long.MAX_VALUE);
+        System.out.println(Long.MIN_VALUE);
     }
 
 }

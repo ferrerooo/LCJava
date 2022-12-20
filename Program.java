@@ -11,8 +11,8 @@ public class Program {
 
         //System.out.println(lc.findDuplicate(arr));
         
-        System.out.println(Long.MAX_VALUE);
-        System.out.println(Long.MIN_VALUE);
+        String s = "abcd";
+        System.out.println(s.substring(1, 3));
     }
 
 }

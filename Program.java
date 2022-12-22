@@ -11,8 +11,8 @@ public class Program {
 
         //System.out.println(lc.findDuplicate(arr));
         
-        String s = "abcd";
-        System.out.println(s.substring(1, 3));
+        char c;
+        System.out.println("");
     }
 
 }

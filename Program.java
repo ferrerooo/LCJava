@@ -11,8 +11,9 @@ public class Program {
 
         //System.out.println(lc.findDuplicate(arr));
         
-        char c;
-        System.out.println("");
+        char c = 'a';
+        c++;
+        System.out.println(c);
     }
 
 }

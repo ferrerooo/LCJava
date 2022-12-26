@@ -4,34 +4,31 @@ public class LC_0017_LetterCombinationsofaPhoneNumber {
     
     public List<String> letterCombinations(String digits) {
         
+        if (digits == null || digits.length() == 0)
+            return new ArrayList<>();
+
         Map<Integer, List<Character>> map = new HashMap<>();
-        
         this.init(map);
+        List<String> res = new ArrayList<>();
         
-        return this.recur(digits, 0, map);
+        this.recur(digits, 0, map, res, "");
+        return res;
     }
     
-    private List<String> recur(String digits, int index, Map<Integer, List<Character>> map) {
+    private void recur(String digits, int index, Map<Integer, List<Character>> map, List<String> res, String cur) {
         
-        List<String> list = new LinkedList<>();
-        
-        if (index == digits.length()) 
-            return list;
-        
-        List<String> sublist = this.recur(digits, index+1, map);
-        List<Character> charList = map.get((Integer)(digits.charAt(index) - '0'));
-        
-        for (char c : charList) {
-            if (sublist.size() == 0) {
-                list.add(String.valueOf(c));
-            } else {
-                for (String str : sublist) {
-                    list.add(String.valueOf(c) + str);
-                }
-            }
+        if (index == digits.length()) {
+            res.add(cur);
+            return;
         }
-        
-        return list;
+
+        List<Character> list = map.get((int)(digits.charAt(index) - '0'));
+
+        for (char c : list) {
+
+            this.recur(digits, index+1, map, res, cur+c);
+
+        }
     }
     
     private void init(Map<Integer, List<Character>> map) {
@@ -44,5 +41,4 @@ public class LC_0017_LetterCombinationsofaPhoneNumber {
         map.put(8, List.of('t', 'u', 'v'));
         map.put(9, List.of('w', 'x', 'y', 'z'));
     }
-
 }

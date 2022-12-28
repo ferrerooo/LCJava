@@ -1,4 +1,6 @@
 import Google.*;
+
+import java.math.BigInteger;
 import java.util.*;
 
 public class Program {
@@ -11,9 +13,11 @@ public class Program {
 
         //System.out.println(lc.findDuplicate(arr));
         
-        String s = "abc";
-        char c = 'd';
-        System.out.println(s+c);
+        int P = 113;
+        int MOD = 1_000_000_007;
+        //int Pinv = BigInteger.valueOf(P).(BigInteger.valueOf(MOD)).intValue();
+   
+        System.out.println(P);
     }
 
 }

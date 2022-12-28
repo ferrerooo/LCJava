@@ -60,5 +60,3 @@ public class LC_0215_KthLargestElementinanArray_QuickSort {
         nums[p2] = temp;
     }
 }
-    
-}

@@ -15,9 +15,10 @@ public class Program {
         
         int P = 113;
         int MOD = 1_000_000_007;
-        //int Pinv = BigInteger.valueOf(P).(BigInteger.valueOf(MOD)).intValue();
-   
-        System.out.println(P);
+        int Pinv = BigInteger.valueOf(P).modInverse(BigInteger.valueOf(MOD)).intValue();
+        System.out.println(Pinv);
+
+        System.out.println((-15)%6);
     }
 
 }

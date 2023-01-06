@@ -1,11 +1,11 @@
 import java.util.*;
 
-public class LC_0341_FlattenNestedListIterator implements Iterator<Integer> {
+public class LC_0341_FlattenNestedListIterator_Approach1 implements Iterator<Integer> {
     
         private List<Integer> list;
         private int cur = 0;
     
-        public LC_0341_FlattenNestedListIterator(List<NestedInteger> nestedList) {
+        public LC_0341_FlattenNestedListIterator_Approach1(List<NestedInteger> nestedList) {
             
             list = new LinkedList<>();
             

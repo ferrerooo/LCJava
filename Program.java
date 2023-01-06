@@ -13,10 +13,11 @@ public class Program {
 
         //System.out.println(lc.findDuplicate(arr));
         
-        int[] coins = new int[]{3,5,7,8,9,10,11};
-        int k = 500;
+        List<Integer> list = new ArrayList<>();
 
-        System.out.println(lc.change(k, coins));
+        for (int i:list) {
+            System.out.println(i);
+        }
     }
 
 }

@@ -32,10 +32,10 @@ public class LC_0718_MaximumLengthofRepeatedSubarray_rollinghash {
 
     private boolean check(int guess, int[] A, int[] B) {
 
-        Map<Long, List<Integer>> hashes = new HashMap();
+        Map<Long, List<Integer>> hashes = new HashMap<>();
         int k = 0;
         for (long x: rolling(A, guess)) {
-            hashes.putIfAbsent(x, new ArrayList());
+            hashes.putIfAbsent(x, new ArrayList<>());
             hashes.get(x).add(k);
             k++;
         }

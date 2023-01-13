@@ -1,9 +1,10 @@
 import java.util.BitSet;
 
 public class LC_0379_DesignPhoneDirectory_BitSet {
-    
+
     BitSet bitset;
     int max; // max limit allowed
+    int smallestFreeIndex; // current smallest index of the free bit
 
     public LC_0379_DesignPhoneDirectory_BitSet(int maxNumbers) {
         this.bitset = new BitSet(maxNumbers);
@@ -11,18 +12,29 @@ public class LC_0379_DesignPhoneDirectory_BitSet {
     }
 
     public int get() {
-        int n = bitset.nextClearBit(0);
-        if (n == max)
+        // handle bitset fully allocated
+        if(smallestFreeIndex == max) {
             return -1;
-        bitset.set(n);
-        return n;
+        }
+        int num = smallestFreeIndex;
+        bitset.set(smallestFreeIndex);
+        //Only scan for the next free bit, from the previously known smallest free index
+        smallestFreeIndex = bitset.nextClearBit(smallestFreeIndex);
+        return num;
     }
 
     public boolean check(int number) {
-        return !bitset.get(number);
+        return bitset.get(number) == false;
     }
 
     public void release(int number) {
+        //handle release of unallocated ones
+        if(bitset.get(number) == false)
+            return;
         bitset.clear(number);
+        if(number < smallestFreeIndex) {
+            smallestFreeIndex = number;
+        }
     }
+    
 }

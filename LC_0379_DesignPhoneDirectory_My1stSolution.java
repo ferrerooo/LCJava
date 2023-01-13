@@ -1,10 +1,10 @@
 import java.util.*;
 
-public class LC_0379_DesignPhoneDirectory {
+public class LC_0379_DesignPhoneDirectory_My1stSolution {
     private Set<Integer> avail;
     private Set<Integer> used;
 
-    public LC_0379_DesignPhoneDirectory(int maxNumbers) {
+    public LC_0379_DesignPhoneDirectory_My1stSolution(int maxNumbers) {
         
         avail = new HashSet<>();
         used = new HashSet<>();

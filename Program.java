@@ -9,15 +9,25 @@ public class Program {
         
         LC_0518_CoinChangeII_DFS_TLE lc = new LC_0518_CoinChangeII_DFS_TLE();
 
-       //String[] arr = {"root/a 1.txt(abcd) 2.txt(efgh)","root/c 3.txt(abcd)","root/c/d 4.txt(efgh)","root 4.txt(efgh)"};
-
-        //System.out.println(lc.findDuplicate(arr));
+        BitSet bits1 = new BitSet(16);
+        BitSet bits2 = new BitSet(16);
         
-        List<Integer> list = new ArrayList<>();
+        System.out.println(bits1);
 
-        for (int i:list) {
-            System.out.println(i);
+        bits1.set(1);
+
+        System.out.println(bits1);
+
+        // set some bits
+        for(int i=0; i<16; i++) {
+           if((i%2) == 0) bits1.set(i);
+           if((i%5) != 0) bits2.set(i);
         }
-    }
+
+        //System.out.println("Initial pattern in bits1: ");
+        //System.out.println(bits1);
+        //System.out.println("\nInitial pattern in bits2: ");
+        //System.out.println(bits2);
+     }
 
 }

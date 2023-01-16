@@ -1,49 +1,35 @@
 import java.util.*;
 
 public class LC_0379_DesignPhoneDirectory_My1stSolution {
-    private Set<Integer> avail;
-    private Set<Integer> used;
+    Set<Integer> set;
 
     public LC_0379_DesignPhoneDirectory_My1stSolution(int maxNumbers) {
-        
-        avail = new HashSet<>();
-        used = new HashSet<>();
-        
-        for (int i = 0; i< maxNumbers; i++) 
-            avail.add(i);
+        this.set = new HashSet<>();
+        for (int i=0; i<maxNumbers; i++) {
+            set.add(i);
+        }
     }
     
     public int get() {
-        
-        int number = -1;
-        
-        if (avail.size() == 0)
-            return number;
-        
-        for (Integer i : this.avail) {
-            number = i;
+
+        if (set.size() == 0)
+            return -1;
+
+        int res = 0;
+        for (int i:set) {
+            res = i;
             break;
         }
-        
-        avail.remove(number);
-        used.add(number);
-        return number;
+
+        set.remove(res);
+        return res;
     }
     
     public boolean check(int number) {
-        return avail.contains(number);
+        return set.contains(number);
     }
     
     public void release(int number) {
-        used.remove(number);
-        avail.add(number);
+        set.add(number);
     }
 }
-
-/**
- * Your PhoneDirectory object will be instantiated and called as such:
- * PhoneDirectory obj = new PhoneDirectory(maxNumbers);
- * int param_1 = obj.get();
- * boolean param_2 = obj.check(number);
- * obj.release(number);
- */

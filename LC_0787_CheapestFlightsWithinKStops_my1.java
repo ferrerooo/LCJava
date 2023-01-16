@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class LC_0787_CheapestFlightsWithinKStops {
+public class LC_0787_CheapestFlightsWithinKStops_my1 {
     public int findCheapestPrice(int n, int[][] flights, int src, int dst, int k) {
         
         Map<Integer, Map<Integer, Integer>> adjMap = new HashMap<>();

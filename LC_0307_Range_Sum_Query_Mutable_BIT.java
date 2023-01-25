@@ -51,5 +51,3 @@ public class LC_0307_Range_Sum_Query_Mutable_BIT {
 
     }
 }
-    
-}

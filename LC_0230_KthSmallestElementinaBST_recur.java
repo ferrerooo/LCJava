@@ -1,25 +1,31 @@
 public class LC_0230_KthSmallestElementinaBST_recur {
-    private int res = 0;
-    private int index = 0;
+    private int res = -1;
+    private int cnt = 0;
 
     public int kthSmallest(TreeNode root, int k) {
-
-        this.recur(root, k);
+        
+        this.dfs(root, k);
         return res;
     }
 
-    private void recur(TreeNode node, int k) {
+    private void dfs(TreeNode node, int k) {
 
-        if (node == null)
+        if (node == null) {
             return ;
+        }
+
+        dfs(node.left, k);
+        cnt ++;
         
-        recur(node.left,k);
-        index++;
-        if (index == k) {
+        if (cnt == k) {
             res = node.val;
             return;
         }
-        recur(node.right,k);
 
+        if (cnt > k) {
+            return;
+        }
+
+        dfs(node.right, k);
     }
 }

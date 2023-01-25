@@ -25,5 +25,3 @@ public class LC_0700_SearchinaBinarySearchTree_NonRecur {
         return null;
     }
 }
-    
-}

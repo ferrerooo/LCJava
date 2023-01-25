@@ -1,4 +1,4 @@
-public class LC_0283_MoveZeroes {
+public class LC_0283_MoveZeroes_my1 {
     public void moveZeroes(int[] nums) {
         
         int index0 = this.getNext0Index(nums, -1);

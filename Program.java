@@ -11,12 +11,7 @@ public class Program {
 
         BitSet bs = new BitSet(3);
 
-        bs.set(3);
-        bs.set(1);
-        bs.set(2);
-        bs.set(0);
-
-        System.out.println(bs.nextClearBit(0));
+        System.out.println(bs.nextClearBit(4));
      }
 
 }

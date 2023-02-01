@@ -1,4 +1,6 @@
+import java.util.*;
 public class LC_0547_NumberofProvince {
+    
     public int findCircleNum(int[][] isConnected) {
         
         int n = isConnected.length;

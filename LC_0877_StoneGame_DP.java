@@ -21,5 +21,3 @@ public class LC_0877_StoneGame_DP {
         return dp[0][n-1] > 0;
     }
 }
-    
-}

@@ -23,5 +23,3 @@ public class LC_0215_KthLargestElementinanArray_Heap {
         return pq.peek();
     }
 }
-    
-}

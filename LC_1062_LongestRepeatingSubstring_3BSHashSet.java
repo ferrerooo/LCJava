@@ -7,7 +7,7 @@ public class LC_1062_LongestRepeatingSubstring_3BSHashSet {
     Return start position if the substring exits and -1 otherwise.
     */
   public int search(int L, int n, String S) {
-    HashSet<String> seen = new HashSet();
+    HashSet<String> seen = new HashSet<>();
     String tmp;
     for(int start = 0; start < n - L + 1; ++start) {
       tmp = S.substring(start, start + L);

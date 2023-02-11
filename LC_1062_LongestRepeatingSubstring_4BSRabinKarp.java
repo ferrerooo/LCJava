@@ -14,7 +14,7 @@ public class LC_1062_LongestRepeatingSubstring_4BSRabinKarp {
     for(int i = 0; i < L; ++i) h = (h * a + nums[i]) % modulus;
 
     // already seen hashes of strings of length L
-    HashSet<Long> seen = new HashSet();
+    HashSet<Long> seen = new HashSet<>();
     seen.add(h);
     // const value to be used often : a**L % modulus
     long aL = 1;

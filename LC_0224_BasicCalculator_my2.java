@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class LC_0224_BasicCalculator_try2 {
+public class LC_0224_BasicCalculator_my2 {
 
     public int calculate(String s) {
 

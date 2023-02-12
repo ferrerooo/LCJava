@@ -1,38 +1,40 @@
 import java.util.*;
 
 public class LC_1062_LongestRepeatingSubstring_3BSHashSet {
-    /*
-    Search a substring of given length
-    that occurs at least 2 times.
-    Return start position if the substring exits and -1 otherwise.
-    */
-  public int search(int L, int n, String S) {
-    HashSet<String> seen = new HashSet<>();
-    String tmp;
-    for(int start = 0; start < n - L + 1; ++start) {
-      tmp = S.substring(start, start + L);
-      if (seen.contains(tmp)) 
-        return start;
-      seen.add(tmp);
+  public int longestRepeatingSubstring(String s) {
+
+    int p1 = 1; 
+    int p2 = s.length()-1;
+    int result = 0;
+
+    while (p1 <= p2) {
+
+      int mid = p1 + (p2-p1)/2;
+
+      if (hasRepeatStr(s, mid)) {
+        result = mid;
+        p1 = mid + 1;
+      } else {
+        p2 = mid - 1;
+      }
     }
-    return -1;
+    
+    return result;
   }
 
-  public int longestRepeatingSubstring(String S) {
-    int n = S.length();
-    // binary search, L = repeating string length
-    int left = 1, right = n;
-    int L;
-    int res = 0;
-    while (left <= right) {
-      L = left + (right - left) / 2;
-      if (search(L, n, S) != -1) {
-        left = L + 1;
-        res = Math.max(res, L);
-      } else 
-        right = L - 1;
+  private boolean hasRepeatStr(String s, int len) {
+
+    Set<String> set = new HashSet<>();
+
+    for (int i=0; i+len<=s.length(); i++) {
+      String sub = s.substring(i, i+len);
+      if (set.contains(sub)) {
+        return true;
+      } else {
+        set.add(sub);
+      }
     }
 
-    return res;
+    return false;
   }
 }

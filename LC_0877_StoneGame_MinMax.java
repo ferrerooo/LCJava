@@ -11,7 +11,8 @@ public class LC_0877_StoneGame_MinMax {
         return score(piles, 0, n-1) > 0;
     }
 
-    // assume person A is going to move. score() function returns the relative score that when person A and B do the best move, what A's relative score is
+    // assume person A is going to move. score() function returns the relative score that 
+    // when person A and B do the best move, what A's relative score is
     private int score(int[] piles, int p1, int p2) {
 
         if (map.containsKey(p1+","+p2)) {

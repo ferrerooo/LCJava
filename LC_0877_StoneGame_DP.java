@@ -4,7 +4,8 @@ public class LC_0877_StoneGame_DP {
         
         int n = piles.length;
 
-        // dp[i][j] means, from piles i to j, (and both A and B do their optimal moves), for the current person to move, what is his optimal relative score.
+        // dp[i][j] means, from piles i to j, (and both A and B do their optimal moves), 
+        // for the current person to move, what is his optimal relative score.
         int[][] dp = new int[n][n];
 
         for (int i=0 ;i<n; i++)

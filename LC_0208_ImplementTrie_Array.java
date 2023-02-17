@@ -3,65 +3,72 @@ public class LC_0208_ImplementTrie_Array {
     private Node root;
 
     public LC_0208_ImplementTrie_Array() {
-        root = new Node();
+        root = new Node('0');
     }
     
     public void insert(String word) {
         
-        Node cur = root;
+        Node node = root;
 
         for (int i=0; i<word.length(); i++) {
-            int pos = word.charAt(i) - 'a';
-            if (cur.next[pos] == null) {
-                cur.next[pos] = new Node();
+            char cur = word.charAt(i);
+            int index = (int)(cur - 'a');
+            if (node.children[index] == null) {
+                node.children[index] = new Node(cur);
             }
-            cur = cur.next[pos];
+
+            node = node.children[index];
         }
 
-        cur.isWord = true;
-
+        node.isWord = true;
     }
     
     public boolean search(String word) {
-
-        Node cur = root;
+        
+        Node node = root;
 
         for (int i=0; i<word.length(); i++) {
-            int pos = word.charAt(i) - 'a';
-            if (cur.next[pos] != null) {
-                cur = cur.next[pos];
+            char cur = word.charAt(i);
+            int index = (int)(cur-'a');
+
+            if (node.children[index] != null) {
+                node = node.children[index];
             } else {
                 return false;
             }
         }
-        
-        return cur.isWord;
+
+        return node.isWord;
+
     }
     
     public boolean startsWith(String prefix) {
-
-        Node cur = root;
+        
+        Node node = root;
 
         for (int i=0; i<prefix.length(); i++) {
-            int pos = prefix.charAt(i) - 'a';
-            if (cur.next[pos] != null) {
-                cur = cur.next[pos];
+            char cur = prefix.charAt(i);
+            int index = (int)(prefix.charAt(i)-'a');
+
+            if (node.children[index] != null) {
+                node = node.children[index];
             } else {
                 return false;
             }
         }
-        
+
         return true;
+
     }
 
     private class Node {
-        public boolean isWord;
-        public Node[] next;
-
-        public Node () {
-            this.isWord = false;
-            this.next = new Node[26];
+        boolean isWord;
+        char c;
+        Node[] children;
+        public Node(char _c) {
+            c = _c;
+            isWord = false;
+            children = new Node[26];
         }
     }
-    
 }

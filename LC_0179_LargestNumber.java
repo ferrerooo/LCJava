@@ -6,8 +6,8 @@ class Solution {
             arr[i] = String.valueOf(nums[i]);
 
         Arrays.sort(arr, (x,y) -> {
-            Long ab = Long.parseLong(x+y);
-            Long ba = Long.parseLong(y+x);
+            Double ab = Double.parseDouble(x+y);
+            Double ba = Double.parseDouble(y+x);
             if (ba > ab)
                 return 1;
             else if (ba < ab)

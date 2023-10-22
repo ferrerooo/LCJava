@@ -1,10 +1,9 @@
 class Solution {
     public ListNode reverseBetween(ListNode head, int left, int right) {
-        
+
         ListNode preHead = new ListNode();
         preHead.next = head;
-        ListNode preLeft = new ListNode();
-        preLeft.next = head;
+        ListNode preLeft = preHead;
 
         ListNode leftNode = getNode(head, left);
         ListNode rightNode = getNode(head, right);
@@ -21,11 +20,7 @@ class Solution {
             rightNode.next = curr;
         }
 
-        if (left == 1) {
-            return preLeft.next;
-        } else {
-            return preHead.next;
-        }
+        return preHead.next;
 
     }
 

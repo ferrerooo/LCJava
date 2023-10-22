@@ -37,3 +37,48 @@ public class LC_0160_IntersectionofTwoLinkedLists {public ListNode getIntersecti
     
 }
 }
+
+/*
+ublic class Solution {
+    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+        
+        int lenA = this.getLen(headA);
+        int lenB = this.getLen(headB);
+
+        ListNode a = headA;
+        ListNode b = headB;
+
+        int diff = 0;
+
+        if (lenA > lenB) {
+            diff = lenA - lenB;
+            for (int i=0; i<diff; i++) {
+                a = a.next;
+            }
+        } else if (lenA < lenB) {
+            diff = lenB - lenA;
+            for (int i=0; i<diff; i++) {
+                b = b.next;
+            }
+        }
+
+        while (a != b) {
+            a = a.next;
+            b = b.next;
+        }
+
+        return a;
+    }
+
+    private int getLen(ListNode n) {
+        if (n == null)
+            return 0;
+        int len = 0;
+        while (n!= null) {
+            len++;
+            n = n.next;
+        }
+        return len;
+    }
+}
+*/

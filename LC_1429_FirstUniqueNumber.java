@@ -48,3 +48,50 @@ public class LC_1429_FirstUniqueNumber {
  * int param_1 = obj.showFirstUnique();
  * obj.add(value);
  */
+
+/*
+class FirstUnique {
+
+    private Queue<Integer> q;
+    private Map<Integer, Integer> map;
+
+    public FirstUnique(int[] nums) {
+        q = new LinkedList<>();
+        map = new HashMap<>();
+
+        for (int n:nums) {
+            if (map.containsKey(n)) {
+                map.put(n, map.get(n)+1);
+            } else {
+                map.put(n, 1);
+            }
+        }
+
+        for (int n:nums) {
+            q.offer(n);
+        }
+    }
+    
+    public int showFirstUnique() {
+        while (q.size() >0 && map.get(q.peek())>1) {
+            q.poll();
+        }
+
+        if (q.size() == 0)
+            return -1;
+        
+        return q.peek();
+    }
+    
+    public void add(int value) {
+        q.offer(value);
+        if (map.containsKey(value)) {
+            map.put(value, map.get(value)+1);
+        } else {
+            map.put(value, 1);
+        }
+    }
+}
+
+
+*/

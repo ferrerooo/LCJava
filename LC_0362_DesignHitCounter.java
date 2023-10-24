@@ -29,6 +29,31 @@ class LC_0362_DesignHitCounter {
 }
 
 /*
+class HitCounter {
+
+    private Queue<Integer> queue;
+
+    public HitCounter() {
+        queue = new LinkedList<>();
+    }
+    
+    public void hit(int timestamp) {
+        queue.offer(timestamp);
+    }
+    
+    public int getHits(int timestamp) {
+        
+        int earliestTimeStamp = timestamp - 300;
+        while (queue.size()>0 && queue.peek()<= earliestTimeStamp) {
+            queue.poll();
+        }
+
+        return queue.size();
+    }
+}
+*/
+
+/*
  * 
  * class HitCounter {
 
